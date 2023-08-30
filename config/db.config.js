@@ -1,12 +1,9 @@
 const Sequelize = require('sequelize')
 
-
 const db = new Sequelize('db_prueba', 'mbrown', '08052018', {
     host: 'localhost',
     dialect: 'postgres',
 });
-
-// 2. Sincronozamos con la base de datos
 async function syncDB() {
     try {
         await db.authenticate()

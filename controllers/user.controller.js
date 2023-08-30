@@ -1,8 +1,6 @@
 
 const { User, Bootcamp } = require('../models/index.js');
 
-
-// creación de un nuevo usuario.
 const createUser = async (req, res) => {
     try {
         const { firstName, lastName, email } =  req.body

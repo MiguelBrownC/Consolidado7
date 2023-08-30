@@ -11,8 +11,6 @@ const createBootcamp = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
-
-// obtener las opciones d ebootcamp por id
 const findById = async (req, res) => {
     try {
         const bootcamp = await Bootcamp.findByPk(req.params.id, {
@@ -27,8 +25,6 @@ const findById = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
-
-//agregar un user al bootcamp
 const addUserBootcamp = async (req, res) => {
     try {
         const { userId, bootcampId } = req.body;
@@ -44,8 +40,6 @@ const addUserBootcamp = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
-
-//obtener todos los usuarios 
 
 const findThem = async (req, res) => {
     try {
